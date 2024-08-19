@@ -1,0 +1,41 @@
+.top,.bottomPart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+}
+.x , input,  select,button{
+    width: 80%;
+}
+.canvas{
+    border: 2px solid black;
+    background-color: white;
+}
+.main{
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.top {
+    margin-top: 100px;
+}
+.top>x{
+    margin: 10px auto;
+}
+
+.x>p{
+    margin:10px auto;
+    width: 50%;
+}
+.bottomPart>button{
+    margin: 10px;   
+}
+
+.header {
+    text-align: center;
+    color: brown;
+    font-family: "Times New Roman", Times, serif;
+}
+
