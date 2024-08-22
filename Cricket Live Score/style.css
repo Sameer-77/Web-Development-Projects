@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    margin-top: 10px;
+    background-color: #212121;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(184, 165, 165);
+    box-shadow: 0px 4px 8px rgba(11, 10, 10, 0.1), 0px 6px 20px rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+body {
+    background-color: #2b1d0f;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.heading {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.show-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+    gap: 16px; /* Space between items */
+    padding: 16px;
+}
+
+.live-matches, .past-matches {
+    flex: 1 1 200px; /* Grow and shrink, with a base width of 200px */
+    border: 2px solid white;
+    height: 100px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 2.2em;
+    background-color: #212121;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.live-matches:hover, .past-matches:hover {
+    transform: scale(1.02); /* Slightly enlarge the item */
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.5); /* White shadow with more spread */
+    background-color: #333333; /* Optional: Change background color on hover */
+}
+
+.displayMatches {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per line */
+    gap: 16px;
+    padding: 16px;
+}
+
+.match {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for a box effect */
+}
+
+.match:hover {
+    transform: scale(1.02); /* Slightly enlarge the item on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow for emphasis */
+}
+
+.match img {
+    max-width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+.match .team-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between team logos */
+    margin-bottom: 10px;
+}
+
+.match .team {
+    display: flex;
+    align-items: center;
+}
+
+.match .team p {
+    margin: 0;
+    color: blue;
+    font-size: 1.5em; /* Smaller font size for team names */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+    .displayMatches {
+        grid-template-columns: 1fr; /* Stack items vertically on small screens */
+    }
+}
+
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000;
+}
+
+.popup-content h2, .popup-content p {
+    margin-bottom: 10px;
+}
+
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+}
+
+.popup-content h2, .popup-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.popup-content .team-popup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.popup-content .team-popup img {
+    max-width: 40px;
+    margin-right: 10px;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Custom scrollbar styles */
+.popup-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+footer {
+    background-color: #212121;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid rgb(184, 165, 165);
+    margin-top: 20px;
+}
+
+footer a {
+    color: #d4d4d4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer form {
+    margin-top: 10px;
+}
+
+footer input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+footer button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f8a488;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #f0774b;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Score</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="liveTitle">
+            <h1>Live Cricket Score</h1>
+        </nav>
+    </div>
+    <div class="main-container">
+        <div class="heading">
+            <marquee behavior="scroll" direction="right" scrollamount="10">Never Miss a Play: Follow Live Scores Instantly</marquee>
+        </div>
+        
+
+        <div class="show-options">
+            <div class="live-matches">Live matches</div>
+            <div class="past-matches">Past matches</div>
+        </div>
+
+        <div class="displayMatches">
+            <!-- Live matches will be displayed here -->
+        </div>
+    </div>
+
+    <div class="popup-container" id="popup-container">
+        <div class="popup-content" id="popup-content">
+            <span class="close-popup" id="close-popup">&times;</span>
+            <!-- Match details will be inserted here -->
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Live Score. All rights reserved.</p>
+            <p>Follow us on: 
+                <a href="#">Twitter</a> |
+                <a href="#">Facebook</a> |
+                <a href="https://www.instagram.com/sameer_shaik.7/?hl=en">Instagram</a>
+            </p>
+            <!-- <form action="#">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form> -->
+            <p>
+                <a href="terms.html">Terms of Service</a> |
+                <a href="privacyPolicy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>
