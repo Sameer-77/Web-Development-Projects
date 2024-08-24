@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="statsContainer">
+            <div class="details">
+                <h1>Achieve and Celebrate</h1>
+                <p>Keep it up!</p>
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="statsNum">
+                <p id="num">0/0</p>
+            </div>
+        </div>
+        <form action="">
+            <input type="text" id="taskInput" placeholder="Enter your task" autocomplete="off">
+            <input type="datetime-local" id="deadlineInput" placeholder="Set deadline">
+            <button id="newTask" type="submit">+</button>
+        </form>
+        <ul class="task-list" id="task-list"></ul>
+        <div id="boom" class="hidden">BOOM! All tasks completed! Do you want to clear all?</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

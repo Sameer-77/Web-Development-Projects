@@ -1,0 +1,153 @@
+:root {
+    --background: black;
+    --secondary: #171c48;
+    --text: #fff;
+    --purple: #828dff;
+    --teal: #24feee;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 120px auto 0 auto;
+}
+
+.details {
+    width: 100%;
+    gap: 50px;
+}
+
+#progress {
+    width: 0%;
+    height: 10px;
+    background-color: var(--teal);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.statsContainer {
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--purple);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+#num {
+    width: 100px;
+    height: 100px;
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+#progressBar {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+    padding: 16px;
+    background-color: var(--secondary);
+    border: 1px solid var(--purple);
+    width: 100%;
+    flex: 1;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+}
+
+button {
+    padding: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: var(--purple);
+    font-size: 30px;
+    color: var(--text);
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+ul.task-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--secondary);
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.task.completed p {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.icons img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#boom {
+    font-size: 1.5em;
+    color: var(--teal);
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.visible {
+    opacity: 1;
+    transform: scale(1);
+}
